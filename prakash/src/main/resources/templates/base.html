@@ -4,3 +4,9 @@
    <!-- <h1>value of x is <span th:text="${x}"></span></h1> -->
    <div th:replace="${content}"></div> 
 </div>
+
+<div th:fragment="test(content)">
+    <h1>This is test fragment</h1>
+    <div th:replace="${content}"></div>
+
+</div>

@@ -20,5 +20,21 @@
     <section>This is Dynamics content</section>
 
    </div>
+
+<div class="host-tag"
+th:replace="${isLogin} ? ~{base::parent(~{::section})}: ~{base:: test(~{::#h1})}">
+<section>
+    <h1>User is loggad</h1>
+    <h2>Dynamics content</h2>
+</section>
+
+<section id="h1">
+    <h1>User is not loggin</h1>
+    <p>Static part hai</p>
+</section>
+
+
+</div>
+
 </body>
 </html>

@@ -12,6 +12,7 @@ public class PageController {
         model.addAttribute("name","prakash kumar");
         model.addAttribute("github","https://github.com/prakashrkumar");
         model.addAttribute("linkdin","https://www.linkedin.com/in/prakashfullstackdeveloper/");
+        model.addAttribute("isLogin",false);
 
         return "home";
     }
