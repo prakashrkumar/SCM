@@ -3,6 +3,7 @@ package com.scm.prakash.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 @Controller 
 public class PageController {
 
@@ -25,5 +26,26 @@ public class PageController {
         System.out.println("service oage per aa gaya hai kay");
         return "service";
     }
+    // contact
+    @RequestMapping("/contact")
+    public  String contact(){
+        System.out.println("contact page oage per aa gaya hai kay");
+        return  new String("contact");
+    }
+
+    @RequestMapping("/login")
+    public  String login(@RequestParam String param){
+        System.out.println("Login page per aa gaya hai kay");
+        return new String("login");
+    }
+
+      //login
+    @RequestMapping("/register")
+    public  String register(){
+        System.out.println("Login page per aa gaya hai kay");
+        return "register";
+    }
+
+    
 
 }
