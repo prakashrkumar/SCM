@@ -1,6 +1,40 @@
-<div class="parent" th:fragment="parent(content)">
-   <h1>This is parent fragment</h1> 
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et reprehenderit, sequi perferendis, aspernatur eveniet commodi quasi laudantium id similique ipsa repellendus iste nulla totam illum saepe expedita architecto. Ab, vitae?</p>
-   <!-- <h1>value of x is <span th:text="${x}"></span></h1> -->
-   <div th:replace="${content}"></div> 
-</div>
+<!DOCTYPE html>
+<html lang="en"
+th:fragment="parent(content,title,script)"
+ xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-th-replace="${title}">SCM page(Base page)</title>
+      <link rel="stylesheet" th:href="@{'/css/output.css'}"/>
+        <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+<body>
+
+ <!-- common header -->
+ <div data-th-replace="navbar :: navbar">
+
+
+  </div>
+
+
+
+
+    <!-- main contain lana hai other file se -->
+    <div class="p-4">
+         <section data-th-replace="${content}">
+
+          <!-- main content -->
+
+     </section>
+    </div>
+          <!-- common  footer -->
+      <footer class="p-4">footer:Learing scm</footer>
+
+
+
+
+     <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+   <th:block data-th-replace="${script}"></th:block>
+</body>
+</html>

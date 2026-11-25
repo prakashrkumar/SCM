@@ -1,30 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- <html lang="en" th:replace="~{base ::parent(~{::#content},~{::title},~{::script})}"> -->
+    <!-- if service page not script then reomve it -->
+     <html lang="en" th:replace="~{base ::parent(~{::#content},~{::title},~{})}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>This is service</title>
 </head>
 <body>
-   <h1>This is service page</h1>
-   <!-- <divb th:insert="~{base::parent}"> -->
-    <!-- <divb th:replace="~{base::parent('service one','services two')}">
-        <section>
-            <h1>This is Dynamics service passed to base parent</h1>
-        </section>
+  <div id="content"> 
+      <h1>Wellcome to service Page</h1>
+    <h2>Service offered by SCM</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nisi dolor neque numquam quaerat pariatur dignissimos error. Deserunt asperiores quos officiis minima architecto, velit veniam, ea cupiditate animi suscipit illo!</p>
+  </div>
 
-   </div>  -->
-
-
-   <divb th:replace="~{base::parent(~{::#second_content})}">
-        <section id="main_content">
-            <h1>This is Dynamics service passed to base parent</h1>
-        </section>
-
-        <section id="second_content">
-            <h1>This is Dynamics thois service passed to base parent</h1>
-        </section>
-
-   </div> 
+  
+    
 </body>
 </html>

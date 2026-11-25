@@ -9,9 +9,7 @@ public class PageController {
      @RequestMapping("/home")
     public String home(Model model){
         System.out.println("test chal rahah hai");
-        model.addAttribute("name","prakash kumar");
-        model.addAttribute("github","https://github.com/prakashrkumar");
-        model.addAttribute("linkdin","https://www.linkedin.com/in/prakashfullstackdeveloper/");
+     
 
         return "home";
     }
