@@ -6,6 +6,7 @@ import java.util.List;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
@@ -46,7 +47,7 @@ public class User {
 
 
     // SELF,GOOGLE,FACEBOOK,TWITTER,LINKDIN,GITHUB
-    @Enumerated 
+    @Enumerated(value = EnumType.STRING) 
     private Providers provider=Providers.SELF;
     private String providerUserId;
 
